@@ -4,7 +4,7 @@ var puppeteer=require("puppeteer");
 
 exports.login=async function (user_name,password){
 
-	var browser= await puppeteer.launch({headless:false});
+	var browser= await puppeteer.launch({headless:true});
 	var page= await browser.newPage();
 	await page.goto("https://mbasic.facebook.com/",{waitUntil:"networkidle2"});
 	console.log("loging in user.......");
